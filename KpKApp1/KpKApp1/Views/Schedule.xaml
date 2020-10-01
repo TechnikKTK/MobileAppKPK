@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:RestAPI="clr-namespace:RestAPI"
+             x:Class="KpKApp1.Views.Schedule"
+             Title="Расписание занятий">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Расписание занятий"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Получить данные" Clicked="Button_Clicked" />
+            <ListView x:Name="ListPersons">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2,15">
+                                <Image HorizontalOptions="Start" Source="bulb.png" />
+                                <Label Text="{Binding Name}" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="18" FontFamily="" />
+                                <Label  Text="{Binding Age}" TextColor="Blue" HorizontalOptions="End" IsVisible="{Binding isOn}" />
+                                <Label Text="{Binding Registered}" TextColor="Gray" HorizontalOptions="End" IsVisible="{Binding isNotOn}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

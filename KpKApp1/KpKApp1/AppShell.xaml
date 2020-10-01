@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:views="clr-namespace:KpKApp1.Views"
+        xmlns:local="clr-namespace:KpKApp1"
+        x:Class="KpKApp1.AppShell"       
+        FlyoutIcon="logo_64.png"
+        BackgroundColor="#1c076b">
+    <Shell.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style TargetType="Shell">
+            <Setter Property="FlyoutBackgroundColor" Value="#000"/>
+        </Style>
+    </Shell.Resources>
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="#fff">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image WidthRequest="90" Source="logo_128.png" Grid.Column="0" />
+            <StackLayout Padding="10,5" Grid.Column="1" HeightRequest="90">
+                <Label Text="ГАПОУ Камышинский"/>
+                <Label Text="политехнический"/>
+                <Label Text="колледж"/>
+            </StackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>   
+    <FlyoutItem Title="Главная">
+        <ShellContent ContentTemplate="{DataTemplate views:Page1}">
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="О нас" StyleClass="fly">
+        <ShellContent ContentTemplate="{DataTemplate views:AboutUS}">
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Расписание">
+        <ShellContent ContentTemplate="{DataTemplate views:Schedule}">
+        </ShellContent>
+    </FlyoutItem>
+</Shell>

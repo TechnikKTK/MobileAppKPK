@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KpKApp1.Views.AboutUS"
+             Title="О колледже">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+                <ListView Grid.Row="0" Grid.Column="0">
+                <ListView.Header>
+                    <StackLayout>
+                        <Label Text="werwer" />
+                    </StackLayout>
+                </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="werwer" />
+                                        <Label Text="wqrwr" />
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
